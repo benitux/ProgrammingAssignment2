@@ -1,13 +1,20 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## These functions provide caching of 
+## These functions provide a way to contain a matrix so that when it's
+## inverse is requiered it's only computed once.
 
 ## Write a short comment describing this function
 
 ## Given any matrix returns a list with four functions
 ## which allows to get and set the matrix value and its inverse
-## This list could be thought as an object with four methods
+## This list could be thought as an object with four methods 
+## (set, get, getinverse and setinverse) and two instance
+## variables (x and i) 
+
+## Note that the set functions use the <<- operator refering the
+## parent envirornment (makeCacheMatrix)
+
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
     ## The set function sets the value of the matrix and 
